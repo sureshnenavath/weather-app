@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between header/main and footer */
+  background-image: url('https://res.cloudinary.com/dd6nthams/image/upload/v1704388603/weather_background.jpg');
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px; /* More rounded corners */
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for focus */
+  outline: none; /* Remove default outline */
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on focus */
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #007bff; /* A more modern blue */
+  color: white;
+  border: none;
+  border-radius: 25px; /* More rounded corners */
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.weather-card {
+  background-color: rgba(54, 28, 28, 0.3); /* Slightly more transparent */
+  border-radius: 15px; /* Slightly more rounded corners */
+  padding: 25px;
+  margin-top: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  width: 350px; /* Slightly wider */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+}
+
+.weather-card:hover {
+    transform: translateY(-5px); /* slight lift */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.weather-card h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  margin: 5px 0;
+}
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px 20px; /* Spacing between items */
+    margin-top: 15px;
+  }
+
+  .weather-info > div {
+    text-align: left; /* Align text to the left within each section */
+  }
+
+.error-message {
+    color:red;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .weather-card {
+    width: 90%; /* Make the card take up most of the screen width */
+    max-width: 350px; /* But don't exceed the original max-width */
+  }
+
+  input[type="text"],
+  button {
+    padding: 10px 15px; /* Slightly smaller padding */
+    font-size: 14px; /* Smaller font size */
+  }
+  h1{
+    font-size: 24px;
+  }
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* More opaque */
+    padding: 10px 0;
+    width: 100%;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3); /* Add background color */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* More opaque */
+    padding: 10px 0;
+    width: 100%;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links p {
+    margin-bottom: 5px;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  /* padding: 8px 15px; */
+  /* border-radius: 5px; */
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  transition: background-color 0.3s ease;
+  font-size: 24px; /* Adjust as needed */
+  display: inline-flex; /* For consistent icon sizing */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  width: 40px; /* Adjust as needed */
+  height: 40px;
+}
+
+.social-links a:hover {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+    opacity: 0.8;
+}
+
+form {
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 15px;
+}
